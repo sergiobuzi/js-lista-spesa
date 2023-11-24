@@ -37,7 +37,31 @@ while (i < arrayspesa.length) {
 }
 
 
+                       //BONUS//
 
-    
+//aggiungo un bottone che mi aggiunge ogetti alla lista della spesa
+const sendButton = document.getElementById("send");
+
+sendButton.addEventListener("click",
+
+    function(){
+
+        //input oggetto
+        const inputitem = document.getElementById("type");
+        console.log("oggetto inserito:", inputitem.value);
+
+        //creo l'elemento li
+        const elementLi = document.createElement("li");
+
+        //dentro questo elemento ci appendo gli oggetti della spesa
+        elementLi.append(inputitem.value);
+
+        //dopo di che appendo gli elementi li dentro l'ul
+        listaUl.append(elementLi); 
+        
+        }
+
+);
+
 
    
